@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack the Ripper | London 1888 Unsolved Mystery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0c0c0e;
+            --card-bg: #141418;
+            --border-color: #2a2a35;
+            --accent-red: #8b0000;
+            --accent-gold: #c5a059;
+            --text-main: #d1d1d6;
+            --text-muted: #8e8e93;
+            --text-heading: #f2f2f7;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--text-heading);
+            font-weight: 700;
+        }
+
+        header {
+            background: linear-gradient(rgba(12, 12, 14, 0.8), rgba(12, 12, 14, 0.95)), url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1920&q=80') center/cover;
+            border-bottom: 2px solid var(--accent-red);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            color: var(--text-heading);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        header p {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+        }
+
+        nav {
+            background-color: #08080a;
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent-gold);
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        .card h3 {
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .victim-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            border-left: 2px solid var(--accent-red);
+            padding-left: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background-color: var(--card-bg);
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1a1a20;
+            color: var(--accent-gold);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+        }
+
+        tr:nth-child(even) {
+            background-color: #101014;
+        }
+
+        .faq-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            margin-bottom: 1rem;
+            padding: 1.2rem;
+            border-radius: 4px;
+        }
+
+        .faq-item h4 {
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            background-color: #08080a;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            nav a { display: inline-block; margin: 0.3rem 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>JACK THE RIPPER</h1>
+        <p>The Whitechapel Murders · London 1888</p>
+    </header>
+
+    <nav>
+        <a href="#intro">Home</a>
+        <a href="#history">History</a>
+        <a href="#victims">Victims</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#suspects">Suspects</a>
+        <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="container">
+        
+        <!-- Introduction -->
+        <section id="intro">
+            <h2 class="section-title">The Mystery That Was Never Solved</h2>
+            <p>Jack the Ripper was the pseudonym given to an unidentified serial killer responsible for multiple murders committed in the impoverished Whitechapel district of London's East End in 1888. The brutality of the crimes and the failure of the police to apprehend the culprit created a media sensation that continues to captivate public interest worldwide over a century later.</p>
+        </section>
+
+        <!-- History -->
+        <section id="history">
+            <h2 class="section-title">London in 1888</h2>
+            <p>During the Victorian era, Whitechapel was synonymous with extreme poverty, overcrowded lodging houses, unemployment, and crime. Survival for many women meant navigating dangerous streets at night or engaging in informal sex work. The complete absence of modern forensics, fingerprint analysis, or coordinated DNA records left law enforcement severely underequipped to stop a calculated predator.</p>
+        </section>
+
+        <!-- Victims -->
+        <section id="victims">
+            <h2 class="section-title">The Canonical Five Victims</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>1. Mary Ann Nichols (Polly)</h3>
+                    <div class="victim-meta">Age: 43 | Died: August 31, 1888<br>Location: Buck's Row</div>
+                    <p>Recognized as the first canonical victim, Nichols was discovered in the early morning hours. Her murder sparked immediate panic across the district.</p>
+                </div>
+                <div class="card">
+                    <h3>2. Annie Chapman</h3>
+                    <div class="victim-meta">Age: 47 | Died: September 8, 1888<br>Location: 29 Hanbury Street</div>
+                    <p>Discovered in a residential backyard, Chapman's murder intensified public pressure on the Metropolitan Police and local authorities.</p>
+                </div>
+                <div class="card">
+                    <h3>3. Elizabeth Stride</h3>
+                    <div class="victim-meta">Age: 44 | Died: September 30, 1888<br>Location: Berner Street</div>
+                    <p>Found in Dutfield's Yard. Historians believe the killer may have been startled or interrupted before finishing the attack.</p>
+                </div>
+                <div class="card">
+                    <h3>4. Catherine Eddowes</h3>
+                    <div class="victim-meta">Age: 46 | Died: September 30, 1888<br>Location: Mitre Square</div>
+                    <p>Killed on the exact same night as Elizabeth Stride—an event recorded historically as the "Double Event" within the City of London police jurisdiction.</p>
+                </div>
+                <div class="card">
+                    <h3>5. Mary Jane Kelly</h3>
+                    <div class="victim-meta">Age: ~25 | Died: November 9, 1888<br>Location: Miller's Court</div>
+                    <p>The youngest and final canonical victim. Unlike the others outdoors, Kelly was brutally slain inside her own rented living quarters.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section id="timeline">
+            <h2 class="section-title">Chronological Timeline</h2>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Historical Event</th>
+                </tr>
+                <tr>
+                    <td>31 August 1888</td>
+                    <td>Mary Ann Nichols murdered in Buck's Row.</td>
+                </tr>
+                <tr>
+                    <td>8 September 1888</td>
+                    <td>Annie Chapman murdered at Hanbury Street.</td>
+                </tr>
+                <tr>
+                    <td>27 September 1888</td>
+                    <td>The famous "Dear Boss" letter is received by a news agency.</td>
+                </tr>
+                <tr>
+                    <td>30 September 1888</td>
+                    <td>The Double Event: Elizabeth Stride and Catherine Eddowes killed.</td>
+                </tr>
+                <tr>
+                    <td>9 November 1888</td>
+                    <td>Mary Jane Kelly murdered in Miller's Court.</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Suspects -->
+        <section id="suspects">
+            <h2 class="section-title">Prominent Historical Suspects</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Montague John Druitt</h3>
+                    <p>A barrister and schoolteacher whose suicide shortly after the final murder raised police suspicion in internal memoranda.</p>
+                </div>
+                <div class="card">
+                    <h3>Aaron Kosminski</h3>
+                    <p>A Polish-born Jewish barber living in Whitechapel who was named by senior police officials as a strong suspect.</p>
+                </div>
+                <div class="card">
+                    <h3>James Maybrick</h3>
+                    <p>A cotton merchant whose controversial 1990s diary claimed direct responsibility for the murders, though authenticity remains heavily debated.</p>
+                </div>
+                <div class="card">
+                    <h3>Francis Tumblety</h3>
+                    <p>An eccentric American-born self-proclaimed doctor who fled Britain amid intense police scrutiny.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h4>Was Jack the Ripper ever identified?</h4>
+                <p>No. Despite exhaustive police investigations and hundreds of suspects proposed over the years, the killer's true identity remains entirely unknown.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Why is he called "Jack the Ripper"?</h4>
+                <p>The name originated from a sensational letter sent to the Central News Agency in September 1888, signed by someone claiming to be the murderer.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How many victims are officially recognized?</h4>
+                <p>Five women (Nichols, Chapman, Stride, Eddowes, and Kelly) are traditionally recognized as the "Canonical Five" victims.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 1888 Whitechapel Murders Archive · Historical Research Website</p>
+    </footer>
+
+</body>
+</html>
